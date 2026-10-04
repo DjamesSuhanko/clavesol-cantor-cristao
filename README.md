@@ -1,13 +1,13 @@
 # Clave Sol — Cantor Cristão
 
-Estrutura independente do hinário, com identidade visual Clave Sol, busca por número/título e player com andamento em BPM e cursor sincronizado. **Ainda não há hinos convertidos ou publicados.** Nenhum XML original foi copiado ou alterado nesta etapa.
+Estrutura independente do hinário, com identidade visual Clave Sol, busca por número/título e player com andamento em BPM e cursor sincronizado. **493 versões de hinos preparadas**, com originais preservados. Veja os 71 casos pendentes em [docs/RESULTADO-CONVERSAO.md](docs/RESULTADO-CONVERSAO.md).
 
 ## GitHub Pages
 
 1. No repositório, abra **Settings → Pages**.
-2. Em **Source**, selecione **GitHub Actions**. Deixe **Custom domain** vazio.
+2. Em **Source**, selecione **GitHub Actions**. Em **Custom domain**, mantenha `cantor.clavesol.com.br` e HTTPS habilitado.
 3. Em **Actions → Publicar Cantor Cristão → Run workflow**, escolha `main` e execute.
-4. O endereço será https://djamessuhanko.github.io/clavesol-cantor-cristao/.
+4. O endereço será https://cantor.clavesol.com.br/.
 
 O commit inicial usa `[skip ci]` para permitir configurar o Pages antes da primeira execução. Os próximos pushes em `main` publicam automaticamente.
 
@@ -29,4 +29,4 @@ Sem `BASE_PATH`, o build usa `/clavesol-cantor-cristao`. A busca ignora acentos 
 
 Consulte [docs/ADICIONAR-HINOS.md](docs/ADICIONAR-HINOS.md). O catálogo é gerado a partir dos Markdown e a busca incorpora automaticamente cada hino publicado. Os arquivos de `assets/music.*`, `music_pages.py` e módulos de MusicXML foram copiados do blog; a busca fica isolada em `catalog_home.py` e `assets/hymn-search.*`.
 
-A estrutura não inclui conversor novo nem executa conversão. Os XML de origem continuam em `/home/djames/Documents/ClaveSol/CantorCristao/`. O script de sincronização dos quatro repositórios existentes ainda não inclui este repositório.
+A conversão em lote está disponível em [docs/CONVERTER-CANTOR-CRISTAO.md](docs/CONVERTER-CANTOR-CRISTAO.md). Os XML de origem continuam em `/home/djames/Documents/ClaveSol/CantorCristao/`. O script de sincronização dos quatro repositórios existentes ainda não inclui este repositório.
