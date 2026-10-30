@@ -30,6 +30,9 @@ html = page('Cantor Cristão', home(catalog, BASE))
 (OUT/'.nojekyll').touch()
 seo = json.loads((ROOT/'seo.json').read_text())
 seo['site_url'] = os.environ.get('SITE_URL',seo['site_url'])
+# Carrossel instalado por adicionar_carrossel.py
+from carousel_install import add_carousel
+add_carousel(ROOT, OUT, BASE)
 finish_seo(OUT,BASE,seo,aliases={collection_route:'','musica':'partituras'})
 finish_build(OUT,BASE)
 print(f"{len(catalog.scores)} partituras validadas; site em {OUT}")
